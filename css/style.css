@@ -229,7 +229,7 @@ hr {
 
     .buttons {
         justify-content: flex-start;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 10px;
