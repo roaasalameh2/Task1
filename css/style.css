@@ -9,6 +9,8 @@ body {
 
     background-color: #e6fdfd;
     min-height: 100vh;
+
+
 }
 
 .container {
@@ -16,6 +18,7 @@ body {
     margin: 0 auto;
     background-color: #e6fdfd;
     min-height: 152px;
+
 
 }
 
@@ -39,9 +42,11 @@ body {
     margin: 16px 8px 16px 8px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 8px;
-    width: auto;
+    min-width: 1110px;
+    max-width: 1110px;
+
 }
 
 .card.active {
@@ -174,6 +179,10 @@ hr {
 }
 
 @media (max-width:768px) {
+    body {
+        padding-top: 120px;
+    }
+
     .container {
         padding: 0 10px;
         margin-top: 60px;
@@ -252,6 +261,10 @@ hr {
 }
 
 @media (max-width: 480px) {
+    body {
+        padding-top: 100px;
+    }
+
     .header {
         height: 100px;
     }
@@ -286,7 +299,7 @@ hr {
 
 @media (min-width: 769px) and (max-width: 1440px) {
     .container {
-        max-width: 1200px;
+        width: 1200px;
         margin: 0 auto;
     }
 
@@ -303,12 +316,12 @@ hr {
 
 @media (min-width: 1441px) {
     .container {
-        max-width: 1600px;
+        width: 1600px;
         margin: 0 auto;
     }
 
     .card {
-        max-width: 600px;
+        width: 600px;
         padding: 28px;
         gap: 20px;
     }
@@ -326,10 +339,8 @@ hr {
 
     .img {
         width: 100px;
-        height: 100px;
     }
 }
-
 
 .filter-bar {
     display: none;

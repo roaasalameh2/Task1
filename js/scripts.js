@@ -83,3 +83,27 @@ clearFilters = () => {
 };
 
 document.getElementById('clear').addEventListener('click', clearFilters);
+
+const container = document.querySelector('.container');
+const cardsData=[
+    {company: 'Photosnap', title: 'Senior Frontend Developer', skills: ['HTML', 'CSS', 'JavaScript']
+    },
+    {company: 'Manage', title: 'Fullstack Developer', skills: ['Python', 'React']
+    },
+    {company: 'Account', title: 'Junior Frontend Developer', skills: ['JavaScript', 'React', 'Sass']
+    }
+];
+
+cardsData.forEach(data => {
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.innerHTML = `
+        <div class="td1">${data.company}</div>
+        <div class="p">${data.title}</div>
+        <div class="skills">
+            ${data.skills.map(skill => `<button class="button">${skill}</button>`).join('')}
+        </div>
+    `;
+    container.appendChild(card);
+});
+
